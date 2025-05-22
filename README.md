@@ -17,9 +17,9 @@ To implement and visualize edge detection techniques (Sobel, Scharr, and Canny) 
 - Average grayscale values are computed per cell using weighted RGB values:
   - `0.299 R + 0.587 G + 0.114 B`
 
-### 3. Custom Convolution and Scaling
+### 3. Convolution and Gray Scale Conversion
 - `convolve()` function performs 2D convolution manually.
-- `scaler()` normalizes matrix values to a 0–255 grayscale scale.
+- `scaler()` converts the values to 0-255 grayscale
 
 ---
 
@@ -30,10 +30,10 @@ To implement and visualize edge detection techniques (Sobel, Scharr, and Canny) 
 - **Computation**:
   - Euclidean: `sqrt(Gx² + Gy²)`
   - Approximate: `|Gx| + |Gy|`
-- **Visualization**: Subplots show both Sobel results and the original image.
+- **Plots**: I have plotted the results of both the approaches above.
 
 ### 2. Scharr Edge Detection
-- **Filters**: Modified Gx and Gy for improved sensitivity and noise resistance.
+- **Filters**: Modified Gx and Gy according to the Scharr edge detection kernel.
 - **Computation**: Same Euclidean formula as Sobel.
 - **Visualization**: Side-by-side display of original and processed image.
 
@@ -46,7 +46,7 @@ To implement and visualize edge detection techniques (Sobel, Scharr, and Canny) 
 
 ---
 
-## Key Functions and Concepts
+## Implemented functions
 - `convolve()`: Applies a kernel to a matrix using custom convolution logic.
 - `scaler()`: Normalizes matrix values to 0–255.
 - `sobel_sqroot()`, `sobel_mod_approx()`, `scharr()`: Compute edge magnitude.
